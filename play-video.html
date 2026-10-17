@@ -50,8 +50,11 @@
 
             <div class="play-video">
 
-                <video controls autoplay>
-                    <source src="images/Pythonintro.mp4" type="video/mp4">
+                <!-- The video source is filled in automatically by script.js.
+                     To change a video file, edit the VIDEOS list at the top of script.js
+                     (you do NOT need to change the src here). -->
+                <video controls autoplay id="mainVideo">
+                    <source id="videoSource" src="" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
@@ -68,14 +71,14 @@
 
                 <!-- VIDEO TITLE -->
 
-                <h3>Best channel to learn Python</h3>
+                <h3 id="videoTitle">Best channel to learn Python</h3>
 
 
                 <!-- VIEWS + ACTION BUTTONS -->
 
                 <div class="play-video-info">
 
-                    <p>1225 Views &bull; 2 days ago</p>
+                    <p id="videoViews">1225 Views &bull; 2 days ago</p>
 
                     <div class="video-actions">
 
@@ -111,10 +114,10 @@
 
                 <div class="publisher">
 
-                    <img src="images/sun.png">
+                    <img src="images/sun.png" id="channelIcon">
 
                     <div>
-                        <p>Sunpower</p>
+                        <p id="channelName">Sunpower</p>
                         <span>50K subscribers</span>
                     </div>
 
@@ -259,12 +262,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=1" class="small-thumbnail">
                         <img src="images/thumbnail1.jpg">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">
+                        <a href="play-video.html?v=1">
                             Best channel that helps to learn programming
                         </a>
                         <p>Sunpower</p>
@@ -276,12 +279,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=2" class="small-thumbnail">
                         <img src="images/thumbnail2.png">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">Learn Java in easy way</a>
+                        <a href="play-video.html?v=2">Learn Java in easy way</a>
                         <p>Moonpower</p>
                         <p>10K views</p>
                     </div>
@@ -291,12 +294,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=3" class="small-thumbnail">
                         <img src="images/thumbnail3.jpg">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">Space at a glance</a>
+                        <a href="play-video.html?v=3">Space at a glance</a>
                         <p>Jupiter</p>
                         <p>11K views</p>
                     </div>
@@ -306,12 +309,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=4" class="small-thumbnail">
                         <img src="images/thumbnail4.jpg">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">Learn to drive a car</a>
+                        <a href="play-video.html?v=4">Learn to drive a car</a>
                         <p>The_Earth</p>
                         <p>18K views</p>
                     </div>
@@ -321,12 +324,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=5" class="small-thumbnail">
                         <img src="images/thumbnail5.jpg">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">How stars twinkle</a>
+                        <a href="play-video.html?v=5">How stars twinkle</a>
                         <p>Star</p>
                         <p>100K views</p>
                     </div>
@@ -336,12 +339,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=6" class="small-thumbnail">
                         <img src="images/thumbnail6.jpg">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">How power is generated</a>
+                        <a href="play-video.html?v=6">How power is generated</a>
                         <p>Sunpower</p>
                         <p>5K views</p>
                     </div>
@@ -351,12 +354,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=7" class="small-thumbnail">
                         <img src="images/thumbnail7.jpg">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">Learn JavaScript</a>
+                        <a href="play-video.html?v=7">Learn JavaScript</a>
                         <p>Moonpower</p>
                         <p>8K views</p>
                     </div>
@@ -366,12 +369,12 @@
 
                 <div class="side-video-list">
 
-                    <a href="#" class="small-thumbnail">
+                    <a href="play-video.html?v=8" class="small-thumbnail">
                         <img src="images/thumbnail8.jpg">
                     </a>
 
                     <div class="vid-info">
-                        <a href="#">Learn SQL</a>
+                        <a href="play-video.html?v=8">Learn SQL</a>
                         <p>Star</p>
                         <p>99K views</p>
                     </div>
