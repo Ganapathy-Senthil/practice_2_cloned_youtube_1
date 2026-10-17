@@ -1,3 +1,93 @@
+/* =========================================================================
+   VIDEO LIST  (one entry per thumbnail on the home page)
+   ========================================================================= */
+var VIDEOS = [
+    {
+        id: 1,
+        src: "images/Pythonintro.mp4",      // <-- VIDEO 1 (thumbnail1)
+        title: "Best channel to learn Python from scratch",
+        channel: "Sunpower", channelIcon: "images/sun.png",
+        views: "15k views", time: "2 days ago"
+    },
+    {
+        id: 2,
+        src: "images/video2.mp4",            // <-- VIDEO 2 (thumbnail2) 
+        title: "Learn Java in easy way",
+        channel: "Moonpower", channelIcon: "images/moon.png",
+        views: "10k views", time: "4 days ago"
+    },
+    {
+        id: 3,
+        src: "images/video3.mp4",            // <-- VIDEO 3 (thumbnail3) 
+        title: "Space at a glance",
+        channel: "Jupiter", channelIcon: "images/jupiter.png",
+        views: "11k views", time: "14 days ago"
+    },
+    {
+        id: 4,
+        src: "images/video4.mp4",            // <-- VIDEO 4 (thumbnail4)
+        title: "Learn to drive a car",
+        channel: "The_Earth", channelIcon: "images/earth.png",
+        views: "18k views", time: "9 days ago"
+    },
+    {
+        id: 5,
+        src: "images/video5.mp4",            // <-- VIDEO 5 (thumbnail5) 
+        title: "How stars twinkle",
+        channel: "Star", channelIcon: "images/star.png",
+        views: "100k views", time: "15 days ago"
+    },
+    {
+        id: 6,
+        src: "images/electricity.mp4",       // <-- VIDEO 6 (thumbnail6) 
+        title: "How power is generated",
+        channel: "Sunpower", channelIcon: "images/sun.png",
+        views: "5k views", time: "1 day ago"
+    },
+    {
+        id: 7,
+        src: "images/video7.mp4",            // <-- VIDEO 7 (thumbnail7)
+        title: "Learn JavaScript",
+        channel: "Moonpower", channelIcon: "images/moon.png",
+        views: "8k views", time: "20 days ago"
+    },
+    {
+        id: 8,
+        src: "images/video8.mp4",            // <-- VIDEO 8 (thumbnail8)
+        title: "Learn SQL",
+        channel: "Star", channelIcon: "images/star.png",
+        views: "99k views", time: "122 days ago"
+    }
+];
+
+/* =========================================================================
+  
+   ========================================================================= */
+var currentVideo = VIDEOS[0];   // default = video 1 if nothing/invalid is selected
+
+var mainVideo = document.getElementById("mainVideo");
+if (mainVideo) {
+
+    var selectedId = parseInt(new URLSearchParams(window.location.search).get("v"));
+
+    for (var i = 0; i < VIDEOS.length; i++) {
+        if (VIDEOS[i].id === selectedId) {
+            currentVideo = VIDEOS[i];
+        }
+    }
+
+    /* Set the video file */
+    document.getElementById("videoSource").src = currentVideo.src;
+    mainVideo.load();
+
+    /* Set title, views, channel name and channel icon */
+    document.getElementById("videoTitle").textContent = currentVideo.title;
+    document.getElementById("videoViews").innerHTML = currentVideo.views + " &bull; " + currentVideo.time;
+    document.getElementById("channelName").textContent = currentVideo.channel;
+    document.getElementById("channelIcon").src = currentVideo.channelIcon;
+    document.title = currentVideo.title + " - GearTube";
+}
+
 /* ========================================= SIDEBAR ========================================= */
 
 var menuicon = document.querySelector(".menu-icon");
@@ -128,7 +218,7 @@ if (shareBtn) {
 
             try {
                 await navigator.share({
-                    title: "Best channel to learn Python",
+                    title: currentVideo.title,   /* uses the title of the video being watched */
                     text: "Check out this video!",
                     url: videoUrl
                 });
