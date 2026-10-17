@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Play Video - GearTube</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="flex-div">
+
+        <div class="nav-left flex-div">
+            <img src="images/menu.png" class="menu-icon">
+            <img src="images/icon.png" class="logo">
+        </div>
+
+        <div class="nav-middle flex-div">
+
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="images/search.png">
+            </div>
+
+            <img src="images/mic.png" class="mic-icon">
+
+        </div>
+
+        <div class="nav-right flex-div">
+            <img src="images/create.png">
+            <img src="images/notification.png">
+            <img src="images/profile.png">
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="container play-container">
+
+        <div class="row">
+
+            <!-- ================= MAIN VIDEO ================= -->
+
+            <div class="play-video">
+
+                <video controls autoplay>
+                    <source src="images/Pythonintro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <!-- TAGS -->
+
+                <div class="tags">
+                    <a href="#">#Coding</a>
+                    <a href="#">#HTML</a>
+                    <a href="#">#CSS</a>
+                    <a href="#">#JavaScript</a>
+                </div>
+
+
+                <!-- VIDEO TITLE -->
+
+                <h3>Best channel to learn Python</h3>
+
+
+                <!-- VIEWS + ACTION BUTTONS -->
+
+                <div class="play-video-info">
+
+                    <p>1225 Views &bull; 2 days ago</p>
+
+                    <div class="video-actions">
+
+                        <button class="action-btn" id="likeBtn">
+                            <img src="images/like.png">
+                            <span id="likeCount">125</span>
+                        </button>
+
+                        <button class="action-btn" id="dislikeBtn">
+                            <img src="images/dislike.png">
+                            <span id="dislikeCount">0</span>
+                        </button>
+
+                        <button class="action-btn" id="shareBtn">
+                            <img src="images/share.png">
+                            <span>Share</span>
+                        </button>
+
+                        <button class="action-btn" id="saveBtn">
+                            <img src="images/save.png">
+                            <span id="saveText">Save</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- CHANNEL INFORMATION -->
+
+                <div class="publisher">
+
+                    <img src="images/sun.png">
+
+                    <div>
+                        <p>Sunpower</p>
+                        <span>50K subscribers</span>
+                    </div>
+
+                    <button type="button" id="subscribeBtn">
+                        Subscribe
+                    </button>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="vid-description">
+
+                    <p>
+                        Channel that makes programming easy to learn.
+                    </p>
+
+                    <p>
+                        Subscribe to the channel to watch more informative videos.
+                    </p>
+
+                    <hr>
+
+                    <!-- COMMENTS -->
+
+                    <h4>
+                        <span id="commentCount">134</span> comments
+                    </h4>
+
+
+                    <!-- ADD COMMENT -->
+
+                    <div class="add-comment">
+
+                        <img src="images/profile.png">
+
+                        <input
+                            type="text"
+                            id="commentInput"
+                            placeholder="Write a comment..."
+                        >
+
+                        <button id="commentBtn">
+                            Comment
+                        </button>
+
+                    </div>
+
+
+                    <!-- EXISTING COMMENT -->
+
+                    <div class="old-comment">
+
+                        <img src="images/profile.png">
+
+                        <div>
+
+                            <h3>
+                                Jack kellen
+                                <span>2 days ago</span>
+                            </h3>
+
+                            <p>
+                                Good information, thanks a lot!
+                            </p>
+
+                            <div class="acomment-action">
+
+                                <button class="comment-like">
+                                    <img src="images/like.png">
+                                    <span>244</span>
+                                </button>
+
+                                <button class="comment-dislike">
+                                    <img src="images/dislike.png">
+                                    <span>0</span>
+                                </button>
+
+                                <button class="reply-btn">
+                                    Reply
+                                </button>
+
+                                <a href="#">All replies</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SECOND COMMENT -->
+
+                    <div class="old-comment">
+
+                        <img src="images/moon.png">
+
+                        <div>
+
+                            <h3>
+                                Moonlunar
+                                <span>5 days ago</span>
+                            </h3>
+
+                            <p>
+                                Good explanation!
+                            </p>
+
+                            <div class="acomment-action">
+
+                                <button class="comment-like">
+                                    <img src="images/like.png">
+                                    <span>104</span>
+                                </button>
+
+                                <button class="comment-dislike">
+                                    <img src="images/dislike.png">
+                                    <span>0</span>
+                                </button>
+
+                                <button class="reply-btn">
+                                    Reply
+                                </button>
+
+                                <a href="#">All replies</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SUGGESTED VIDEOS ================= -->
+
+            <div class="right-sidebar">
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail1.jpg">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">
+                            Best channel that helps to learn programming
+                        </a>
+                        <p>Sunpower</p>
+                        <p>15K views</p>
+                    </div>
+
+                </div>
+
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail2.png">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">Learn Java in easy way</a>
+                        <p>Moonpower</p>
+                        <p>10K views</p>
+                    </div>
+
+                </div>
+
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail3.jpg">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">Space at a glance</a>
+                        <p>Jupiter</p>
+                        <p>11K views</p>
+                    </div>
+
+                </div>
+
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail4.jpg">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">Learn to drive a car</a>
+                        <p>The_Earth</p>
+                        <p>18K views</p>
+                    </div>
+
+                </div>
+
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail5.jpg">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">How stars twinkle</a>
+                        <p>Star</p>
+                        <p>100K views</p>
+                    </div>
+
+                </div>
+
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail6.jpg">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">How power is generated</a>
+                        <p>Sunpower</p>
+                        <p>5K views</p>
+                    </div>
+
+                </div>
+
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail7.jpg">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">Learn JavaScript</a>
+                        <p>Moonpower</p>
+                        <p>8K views</p>
+                    </div>
+
+                </div>
+
+
+                <div class="side-video-list">
+
+                    <a href="#" class="small-thumbnail">
+                        <img src="images/thumbnail8.jpg">
+                    </a>
+
+                    <div class="vid-info">
+                        <a href="#">Learn SQL</a>
+                        <p>Star</p>
+                        <p>99K views</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
